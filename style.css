@@ -1,0 +1,265 @@
+@keyframes editor_brush_blink {
+	0% { opacity: 0; }
+	50% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+.root {
+	position: relative;
+	overflow: auto;
+
+	width: 0px;
+	height: 0px;
+	z-index: 0;
+
+	background: #7f7f7f;
+	image-rendering: pixelated;
+
+	pointer-events: auto;
+	user-select: none;
+}
+
+.image {
+	position: relative;
+
+	width: auto;
+	height: auto;
+
+	pointer-events: auto;
+}
+
+.tileset {
+	position: absolute;
+	overflow: hidden;
+
+	width: 0px;
+	height: 0px;
+	z-index: 0;
+
+	background: black;
+}
+
+.tileset_layer {
+	position: absolute;
+	overflow: hidden;
+
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+
+	image-rendering: pixelated;
+	image-rendering: crisp-edges;
+}
+
+.editor {
+	position: absolute;
+	overflow: hidden;
+
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+
+	pointer-events: auto;
+}
+
+.editor_window {
+	position: fixed;
+	overflow: hidden;
+
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+
+	pointer-events: none;
+}
+
+.editor_panel {
+	position: absolute;
+	overflow: auto;
+	padding: 4px;
+
+	border: 16px solid transparent;
+	border-radius: 32px;
+	border-image: url(img/gfx/border_white.png) 4 round;
+
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	z-index: 20;
+
+	background: white;
+
+	pointer-events: auto;
+}
+
+.editor_panel_bar {
+	top: 0%;
+	left: 2.5%;
+	width: 90%;
+	height: auto;
+}
+
+.editor_panel_bar_button {
+	position: relative;
+
+	font-family: monospace;
+	font-weight: bold;
+
+	width: 33%;
+	height: auto;
+}
+
+.editor_panel_tileset {
+	top: 12.5%;
+	left: 25%;
+	width: 50%;
+	height: 75%;
+}
+
+.editor_panel_tileset_image {
+	position: relative;
+	overflow: auto;
+
+	width: 100%;
+	height: auto;
+}
+
+.editor_panel_tileset_select {
+	position: relative;
+
+	font-family: monospace;
+	font-weight: bold;
+
+	width: 100%;
+	height: auto;
+}
+
+.editor_panel_tileset_slider {
+	position: relative;
+
+	font-family: monospace;
+	font-weight: bold;
+
+	width: 50%;
+	height: auto;
+}
+
+.editor_panel_tileset_button {
+	position: relative;
+
+	text-align: center;
+	font-family: monospace;
+	font-weight: bold;
+
+	width: 10%;
+	height: auto;
+}
+
+.editor_panel_tileset_label {
+	position: relative;
+
+	font-family: monospace;
+	font-weight: bold;
+
+	width: auto;
+	height: auto;
+}
+
+.editor_panel_tileset_checkbox {
+	position: relative;
+
+	width: auto;
+	height: auto;
+}
+
+.editor_brush {
+	animation: editor_brush_blink forwards 1s infinite;
+	animation-timing-function: linear;
+
+	position: absolute;
+	overflow: hidden;
+
+	top: 0px;
+	left: 0px;
+	width: 0px;
+	height: 0px;
+	z-index: 1;
+
+	color: black;
+	text-align: left;
+	font-family: monospace;
+	font-size: 0px;
+	font-weight: bold;
+	line-height: 125%;
+	white-space: pre-line;
+
+	opacity: 0.5;
+	background: transparent;
+	background-position: 0px 0px;
+	background-size: 0px 0px;
+	pointer-events: none;
+}
+
+.editor_marker {
+	position: absolute;
+	overflow: hidden;
+
+	top: 0px;
+	left: 0px;
+	width: 0px;
+	height: 0px;
+	z-index: 1;
+
+	color: black;
+	text-align: center;
+	font-family: monospace;
+	font-size: 0px;
+	font-weight: bold;
+	line-height: 125%;
+	white-space: pre-line;
+
+	background: transparent;
+	pointer-events: none;
+}
+
+.editor_marker_frame {
+	position: absolute;
+	overflow: hidden;
+
+	top: 0px;
+	left: 0px;
+	width: 0px;
+	height: 0px;
+	z-index: 0;
+
+	color: white;
+	text-align: center;
+	font-family: monospace;
+	font-size: 0px;
+	font-weight: bold;
+	line-height: 125%;
+	white-space: pre-line;
+
+	background: transparent;
+	pointer-events: none;
+}
+
+.element_label {
+	position: relative;
+
+	width: 100%;
+	height: auto;
+
+	font-family: monospace;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 125%;
+	white-space: pre-line;
+
+	color: black;
+}
